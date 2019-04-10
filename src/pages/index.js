@@ -1,3 +1,14 @@
-import React from "react"
+import React from "react";
+import Layout from "../components/layout";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default () => <div>Hello world!</div>
+const index = () => {
+      return (
+            <Layout>
+                  <h1>Mr. Wood's Science Site</h1>
+                  <h3>Sciency science stuff</h3>
+            </Layout>
+      );
+};
+
+export default index;
