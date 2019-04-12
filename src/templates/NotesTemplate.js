@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../components/layout";
 
-const NotesTemplate = ({ children }) => {
+const NotesTemplate = props => {
       return (
-            <Layout>
+            <div>
                   <h1>Notes Page</h1>
-                  {children}
-            </Layout>
+                  <h3>{props.content.title}</h3>
+                  {props.children}
+            </div>
       );
 };
 
