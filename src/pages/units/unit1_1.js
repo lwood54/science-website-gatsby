@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/layout";
-import NotesTemplate from "../templates/NotesTemplate";
-import sev8B from "../components/TEKS/sev8B";
+import Layout from "../../components/layout";
+import NotesTemplate from "../../templates/NotesTemplate";
+import sev8B from "../../components/TEKS/sev8B";
 
 const unit1_1 = () => {
       return (
