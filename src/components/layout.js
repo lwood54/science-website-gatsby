@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../../src/theme";
+import Navbar from "../components/Navigation/Navbar";
 
 const TopLayout = props => {
       return (
@@ -21,6 +22,7 @@ const TopLayout = props => {
                   <ThemeProvider theme={theme}>
                         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                         <CssBaseline />
+                        <Navbar />
                         {props.children}
                   </ThemeProvider>
             </React.Fragment>
