@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../../src/theme";
 import Navbar from "../components/Navigation/Navbar";
+import "./layout.module.scss";
 
 const TopLayout = props => {
       return (
@@ -16,6 +17,10 @@ const TopLayout = props => {
                         />
                         <link
                               href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+                              rel="stylesheet"
+                        />
+                        <link
+                              href="https://fonts.googleapis.com/css?family=Exo:400,500,700,900,900i"
                               rel="stylesheet"
                         />
                   </Helmet>
