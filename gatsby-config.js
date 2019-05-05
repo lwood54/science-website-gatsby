@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
       siteMetadata: {
             title: "Mr. Wood's Science Page",
@@ -18,6 +20,22 @@ module.exports = {
                   },
                   // 'gatsby-plugin-styled-components',
             },
+            {
+                  resolve: "gatsby-source-filesystem",
+                  options: {
+                        name: "TEKS",
+                        path: `${__dirname}/src/components/TEKS`,
+                  },
+            },
+            {
+                  resolve: `gatsby-source-filesystem`,
+                  options: {
+                        name: `images`,
+                        path: `${__dirname}/src/images`,
+                  },
+            },
+            `gatsby-plugin-sharp`,
+            `gatsby-transformer-sharp`,
             `gatsby-plugin-playground`,
       ],
 };
