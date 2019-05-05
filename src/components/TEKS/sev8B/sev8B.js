@@ -1,7 +1,3 @@
-import { graphql } from "gatsby";
-
-// const
-
 const sev8B = {
       title: "Watersheds and Weathering",
       standard:
@@ -9,7 +5,7 @@ const sev8B = {
       summary:
             "Focus: Weathering, erosion, deposition, and human impact on watersheds.",
       s1: "Section 1 content",
-      s1Img: require("./images/butterfly_on_leaves.jpg"),
+      s1Img: "Some Image",
       s2: "Section 2 content",
       s2Img: "section 2 image here",
       quiz: [

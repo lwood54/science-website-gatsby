@@ -1,10 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import NotesTemplate from "../../templates/NotesTemplate";
 import sev8B from "../../components/TEKS/sev8B/sev8B";
-
-// export const query = graphql``;
 
 const unit1_1 = () => {
       return (

@@ -1,6 +1,7 @@
 import React from "react";
-import Img from "gatsby-image";
+
 const NotesTemplate = props => {
+      console.log("data: ", props.data);
       return (
             <div>
                   <h1>Notes Page</h1>
