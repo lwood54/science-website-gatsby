@@ -27,3 +27,7 @@
       Then create a different query that I might use in a file so specifically load one image, and use the filter / relativePath that was confirmed in the other query
 
       NOTE: It does appear that these queries can get messed up if an additional resolve is created ahead of the currently used resolves
+
+## Additional Error Point
+
+1. Make sure to notice {} usage when using spread operator for the childImageSharp {}

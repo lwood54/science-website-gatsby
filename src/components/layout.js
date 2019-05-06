@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/styles";
-import theme from "../../src/theme";
 import Navbar from "../components/Navigation/Navbar";
 import "./layout.module.scss";
 
@@ -24,12 +21,8 @@ const TopLayout = props => {
                               rel="stylesheet"
                         />
                   </Helmet>
-                  <ThemeProvider theme={theme}>
-                        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-                        <CssBaseline />
-                        <Navbar />
-                        {props.children}
-                  </ThemeProvider>
+                  <Navbar />
+                  {props.children}
             </React.Fragment>
       );
 };

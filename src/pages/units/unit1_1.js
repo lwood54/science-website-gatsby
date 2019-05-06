@@ -1,13 +1,43 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../../components/layout";
-import NotesTemplate from "../../templates/NotesTemplate";
-import sev8B from "../../components/TEKS/sev8B/sev8B";
+import sev8B from "../../components/TEKS/sev8B.json";
 
-const unit1_1 = () => {
+import cls from "../../styles/unitPages.module.scss";
+// Instead of passing the content to the NotesTemplate, use the NotesTemplate to wrap the content to add
+// any needed headers and navs, but wrap the content.
+// Then inside the NotesTemplate, use a NoteCard hoc like in the other website, then I can customize
+// whether the images are left/right, whatever.
+
+const unit1_1 = props => {
+      const { sev8BJson } = useStaticQuery(
+            graphql`
+                  query {
+                        sev8BJson {
+                              topics {
+                                    image {
+                                          name
+                                          imgSide
+                                          imgSrc {
+                                                childImageSharp {
+                                                      fluid(maxWidth: 450) {
+                                                            ...GatsbyImageSharpFluid
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            `
+      );
+      console.log("sev8B: ", sev8B);
+      console.log("images: ", sev8BJson.topics);
       return (
             <Layout>
-                  <h1>Unit 1.1</h1>
-                  <NotesTemplate content={sev8B} />
+                  <h1 className={cls.unitPageTitle}>
+                        Levels of Organization - Unit 1.1
+                  </h1>
             </Layout>
       );
 };

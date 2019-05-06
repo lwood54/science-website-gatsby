@@ -8,6 +8,17 @@ module.exports = {
       plugins: [
             `gatsby-plugin-sass`,
             `gatsby-plugin-react-helmet`,
+            `gatsby-plugin-sharp`,
+            `gatsby-transformer-sharp`,
+            `gatsby-transformer-json`,
+            `gatsby-plugin-playground`,
+            {
+                  resolve: `gatsby-source-filesystem`,
+                  options: {
+                        name: `teksJSONContent`,
+                        path: `${__dirname}/src/components/TEKS`,
+                  },
+            },
             {
                   resolve: `gatsby-plugin-material-ui`,
                   // If you want to use styled components, in conjunction to Material-UI, you should:
@@ -34,8 +45,5 @@ module.exports = {
                         path: `${__dirname}/src/images`,
                   },
             },
-            `gatsby-plugin-sharp`,
-            `gatsby-transformer-sharp`,
-            `gatsby-plugin-playground`,
       ],
 };
