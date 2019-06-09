@@ -6,7 +6,7 @@
       "license": "MIT",
       "scripts": {
             "build": "gatsby build",
-            "develop": "gatsby develop",
+            "dev": "gatsby develop",
             "format": "prettier --write src/**/*.{js,jsx}",
             "start": "npm run develop",
             "serve": "gatsby serve",
@@ -21,6 +21,7 @@
             "gatsby-plugin-sass": "^2.0.11",
             "gatsby-plugin-sharp": "^2.0.36",
             "gatsby-source-filesystem": "^2.0.33",
+            "gatsby-source-wordpress": "^3.0.64",
             "gatsby-transformer-json": "^2.1.11",
             "gatsby-transformer-sharp": "^2.1.19",
             "node-sass": "^4.11.0",
